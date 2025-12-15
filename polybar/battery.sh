@@ -6,8 +6,9 @@ status=$(echo $battery_info  | awk '{print $3}' | sed 's/,//')
 percentage=${battery%%%}
 
 
-
-if [ $percentage -ge 80 ]; then
+if [ $percentage -ge 100 ]; then
+   icon=' '
+elif [ $percentage -ge 80 ]; then
   icon=' '  
 elif [ $percentage -ge 60 ]; then
   icon=' '  

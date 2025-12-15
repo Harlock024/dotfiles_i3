@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec warp-terminal
+bindsym $mod+Return exec --no-startup-id ghostty
 
 # kill focused window
 bindsym $mod+q kill
@@ -214,7 +214,7 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Rofi applications
 
-bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/harlock_config/launchers/launcher.sh
 bindsym $mod+o exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 
 # POLYBAR
