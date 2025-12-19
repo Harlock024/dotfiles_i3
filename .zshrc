@@ -102,23 +102,21 @@ alias cat='bat'
 
 #alias pn='pnpm'
 
-alias zed='zeditor'
-
-alias wind='/opt/Windsurf/bin/windsurf'
-
+#alias zed='zeditor'
 
 #alias cursor = "/home/harlock024/Applications/cursor_7b054393e4ad2bf7f0ffcfd28a0eb59d.AppImage"
 
 #alias code="/opt/VSCode-linux-x64/code&"
 
 
-source ~/.zsh_functions
+#source ~/.zsh_functions
 
 
 eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh)"
 
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 
@@ -136,7 +134,7 @@ export PATH="$PATH:/home/harlock024/.local/bin"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
 
 # bun completions
 [ -s "/home/harlock024/.bun/_bun" ] && source "/home/harlock024/.bun/_bun"
@@ -155,35 +153,23 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/bin:$PATH"
 
 
+export PATH="$HOME/.local/bin:$PATH"
 
 
 
 
-PATH=~/.console-ninja/.bin:$PATH
+#PATH=~/.console-ninja/.bin:$PATH
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-alias netbeans-20="/opt/netbeans-20-bin/netbeans"
-
-
 export PATH="$HOME/go/bin:$PATH"
 
+#export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$PATH
+#export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+#export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH
+#export PATH="$PATH:$HOME/development/flutter/bin"
 
 
-#export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
-
-# pnpm
-export PNPM_HOME="/home/harlock024/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# Turso
-export PATH="$PATH:/home/harlock024/.turso"
-
-export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$PATH
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH
+if [[ $- != *i* ]]; then
+     return
+fi
