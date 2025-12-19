@@ -7,15 +7,40 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "Editor",
+    "bindings": {}
+  },
+  //
+  {
+    "context": "VimNormal",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "\\ e": "project_panel::ToggleFocus"
     }
   },
   {
-    "context": "Editor",
+    "context": "VimNormal",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "\\ t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "VimControl",
+    "bindings": {
+      "alt-,": "pane::ActivateLastItem",
+      "alt-.": "pane::ActivateNextItem",
+      "\\ c": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ t": "workspace::ToggleBottomDock"
     }
   }
 ]
